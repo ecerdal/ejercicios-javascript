@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <label for="usuario">Ingrese nombre de usuario:</label>
+                <input type="text" id="usuario"><br><br>
+                <label for="clave">Ingrese clave:</label> 
+                <input type="password" id="clave" onBlur="verificar(this)"><br><br>
+                <input type="button" value="confirmar">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function verificar(control) {
+            if (control.value.length < 7 || control.value.length > 20) {
+                alert("clave inválida (deben ser entre 7-20 caracteres)");
+            }
+        }
+    </script>
+
+</body>
+</html>

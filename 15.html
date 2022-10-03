@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <p>Procesador:</p>
+        <select id="procesadores">
+            <option value="400">Intel I3</option>
+            <option value="600">Intel I5</option>
+            <option value="800">Intel I7</option>
+        </select>
+
+        <p>Monitores:</p>
+        <select id="monitores">
+            <option value="250">Monitor Samsung 20</option>
+            <option value="350">Monitor Samsung 22</option>
+            <option value="550">Monitor Samsung 26</option>
+        </select>
+
+        <p>Discos duros:</p>
+        <select id="discosduros">
+                <option value="300">Disco Duro 500 Gb</option>
+                <option value="440">Disco Duro 1 Tb</option>
+                <option value="500">Disco Duro 3 Tb</option>
+        </select>
+
+        <br><br><br><br>
+        <p><input type="button" value="Calcular Presupuesto" onClick="calcularPresupuesto()"></p>
+        <p><input type="text" id="resultado"></p>
+    </form>
+
+    <script>
+        function calcularPresupuesto() {
+            var elemento1 = document.getElementById('procesadores')
+            var precio1 = elemento1.options[elemento1.selectedIndex].value;
+            var elemento2 = document.getElementById('monitores')
+            var precio2 = elemento2.options[elemento2.selectedIndex].value;
+            var elemento3 = document.getElementById('discosduros')
+            var precio3 = elemento3.options[elemento3.selectedIndex].value;
+            precio1 = parseInt(precio1);
+            precio2 = parseInt(precio2);
+            precio3 = parseInt(precio3);
+            var suma = precio1 + precio2 + precio3;
+            document.getElementById('resultado').value = suma;
+        }
+    </script>
+
+</body>
+</html>

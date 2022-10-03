@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var sueldo;
+        var antiguedad;
+        sueldo = parseFloat(prompt("Ingresar el sueldo del empleado"));
+        antiguedad = parseInt(prompt("Ingresar la antigüedad del empleado"));
+
+        if (sueldo < 500 && antiguedad >= 10) {
+            document.write("Se ha otorgado un aumento del 20 %");
+            document.write("<br>");
+            var sueldoFinal = sueldo + sueldo * 0.20;
+            document.write("Su sueldo final es: " + sueldoFinal);
+        } else {
+            if (sueldo < 500 && antiguedad < 10) {
+                document.write("Se ha otorgado un aumento del 5 %");
+                document.write("<br>");
+                var sueldoFinal = sueldo + sueldo * 0.05;
+                document.write("Su sueldo final es: " + sueldoFinal);
+            } else {
+                document.write("Su sueldo no tiene cambios: " + sueldo);
+            }
+        }
+    </script>
+
+</body>
+</html>
